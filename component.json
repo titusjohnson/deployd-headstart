@@ -1,5 +1,5 @@
 {
-  "name": "Deployd Headstart",
+  "name": "DeploydHeadstart",
   "version": "0.0.4",
   "dependencies": {
     "jquery": "~2.0.0",
