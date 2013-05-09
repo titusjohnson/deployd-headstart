@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deployd Headstart</title>
+    <link rel="stylesheet" href="/media/stylesheets/normalize.css" />
+    <link rel="stylesheet" href="/media/stylesheets/foundation.css" />
+    <link rel="stylesheet" href="/media/stylesheets/stylesheet.css" />
+    <script type="text/javascript" src="/media/javascript/custom.modernizr.js"></script>
+</head>
+<body>
+<div id="App">
+    <nav class="top-bar">
+        <ul class="title-area">
+            <li class="name"><h1><a href="/#/">Deployd Headstart</a></h1></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <ul class="left">
+                <li class="divider"></li>
+                <li><a href="/#/settings">Settings</a></li>
+            </ul>
+        </section>
+    </nav>
+	
+    <div data-bind="template: { name: Template(), data: TemplateViewModel() }" id="PageTemplate"></div>
+</div>
+<div id="Views">
+	<!-- build:section views -->
+	<!-- /build -->
+</div>
+
+    <script type="text/javascript" src="/dpd.js"></script>
+    <script type="text/javascript" src="/media/javascript/libs.js"></script>
+    <script type="text/javascript" src="/media/javascript/app.js"></script>
+</body>
+</html>
