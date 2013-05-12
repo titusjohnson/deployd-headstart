@@ -1,4 +1,5 @@
 {
+  "name": "DeploydHeadstart",
   "version": "0.0.4",
   "devDependencies": {
     "grunt": "~0.4.0a",
