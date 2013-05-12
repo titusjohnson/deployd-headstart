@@ -8,8 +8,9 @@
 <div class="row">
     <div class="twelve columns">
 	   <h4>Basic Concepts.</h4>
-       <p>Headstart is mostly a set of Grunt and Bower configuration files, and a loose framework of supporting JS designed to give the user a simple MVC-esq experience, intended for use with Deployd.
-       <p>At its core, Gruntfile.js makes assumptions about the workflow. Foundation4 is preconfigured, SASS is assumed, and the front-end uses jQuery, KnockoutJS, and FinchJS.
+       <p>Headstart is mostly a set of Grunt and Bower configuration files, and a loose framework of supporting JS designed to give the user a simple MVC-esq experience, intended for use with Deployd for any backend data needs.</p>
+       <p>At its core, Gruntfile.js makes strong assumptions about workflow. Foundation4 is preconfigured, SASS is assumed, and the front-end uses jQuery, KnockoutJS, and FinchJS. Headstart provides a very basic framework, consisting of FinchJS for routing, and KnockoutJS for everything else. Routes initalize named KnockoutJS view models, which in turn provide data to templates. It's a very simple setup focused on getting pages working immediatly, and in as traditional a style as possible.</p>
+       
        <p>Getting started is easy. We assume that you have already installed deployd, node, and have grunt-cli working. The following set of terminal commands also assume you're on OSX.
             <blockquote>
             $ cd /your/destination<br />
@@ -22,10 +23,13 @@
             $ grunt init<br />
             $ grunt
             </blockquote>
-            <p>At this point your new app is being monitored. Grunt is watching your source folder, and will automatically compile changed SCSS, templates, images, and javascript into deployd's public directory. If you fire up deployd in the parent directory you should be able to visit the site's small front-end and view some extra documentation.</p>
+            <p>At this point your new app is being monitored. Bower has grabbed all the source files needed, the grunt:init call ran through Bower's components directory and compiled some lib files for you. Grunt is watching your source folder, and will automatically compile changed SCSS, templates, images, and javascript into deployd's public directory. If you fire up deployd in the parent directory you should be able to visit the site's small front-end and view some extra documentation.</p>
 
-            <p>Some things are still a bit rough, and most of the documentation is in the code. The structure of the framework is very simple, there are two main viewmodels, each page is a child view model that Finch binds when it detects a matching route change. What happens when a page loads is up to you. I usually grab some data from Deployd and insert it into any observables I want, return the object, and then write up some templates.
+            <p>Some things are still a bit rough, and most of the documentation is in the code. The structure of the framework is very simple, there are two main viewmodels, each page is a child view model that Finch binds when it detects a matching route change. What happens when a page loads is up to you. I usually grab some data from Deployd and insert it into any observables I want, return the object, and then write up some templates.</p>
 
+            <p>It's a Headstart, just intended to get the setup out of the way so you can start writing some code.</p>
+
+            <p><a href="https://github.com/titusjohnson/deployd-headstart">https://github.com/titusjohnson/deployd-headstart</a>
     </div>
 </div>
 </script>
