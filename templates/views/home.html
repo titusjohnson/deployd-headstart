@@ -1,3 +1,31 @@
 <script type="text/html" id="home">
-	<p>Stuff here for the home page.</p>
+<div class="row">
+    <div class="twelve columns">
+       <h2>Welcome to Headstart for deployd.</h2>
+       <p>This collection of libraries is intended to give you a <em>head start</em> on mocking up ideas, concepts, and other data-driven web <em>things</em>. You are encouraged to fork the project and customize as per your needs.
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+	   <h4>Basic Concepts.</h4>
+       <p>Headstart is mostly a set of Grunt and Bower configuration files, and a loose framework of supporting JS designed to give the user a simple MVC-esq experience, intended for use with Deployd.
+       <p>At its core, Gruntfile.js makes assumptions about the workflow. Foundation4 is preconfigured, SASS is assumed, and the front-end uses jQuery, KnockoutJS, and FinchJS.
+       <p>Getting started is easy. We assume that you have already installed deployd, node, and have grunt-cli working. The following set of terminal commands also assume you're on OSX.
+            <blockquote>
+            $ cd /your/destination<br />
+            $ dpd create your-app-name<br />
+            $ cd your-app-name<br />
+            $ git clone https://github.com/titusjohnson/deployd-headstart your-app-name<br />
+            $ cd your-app-name<br />
+            $ npm install<br />
+            $ bower install<br />
+            $ grunt init<br />
+            $ grunt
+            </blockquote>
+            <p>At this point your new app is being monitored. Grunt is watching your source folder, and will automatically compile changed SCSS, templates, images, and javascript into deployd's public directory. If you fire up deployd in the parent directory you should be able to visit the site's small front-end and view some extra documentation.</p>
+
+            <p>Some things are still a bit rough, and most of the documentation is in the code. The structure of the framework is very simple, there are two main viewmodels, each page is a child view model that Finch binds when it detects a matching route change. What happens when a page loads is up to you. I usually grab some data from Deployd and insert it into any observables I want, return the object, and then write up some templates.
+
+    </div>
+</div>
 </script>

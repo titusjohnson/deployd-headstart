@@ -3,11 +3,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-html-build');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         // Javascript EVERYWHERE
         concat: {
             // This just moves modernizr to a usuable place
@@ -83,9 +83,32 @@ module.exports = function(grunt) {
             }
         },
 
+        // General files folder, used for images, static files.
+        copy: {
+            app: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'files/',
+                        src: ['**'],
+                        dest: '../public/files/'
+                    }
+                ]
+            }
+        },
+
         // For watching we specifically look for non-library changes. If you update your
         // libraries run 'grunt init' from the command line to include your changes
         watch: {
+            copy: {
+                files: [
+                    'files/*',
+                    'files/*/*',
+                    'files/*/*/*',
+                    'files/*/*/*/*'
+                ],
+                tasks: ['copy:app']
+            },
             scripts: {
                 files: [
                     'javascript/*',
