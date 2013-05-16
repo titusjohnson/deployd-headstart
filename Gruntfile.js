@@ -102,10 +102,7 @@ module.exports = function(grunt) {
         watch: {
             copy: {
                 files: [
-                    'files/*',
-                    'files/*/*',
-                    'files/*/*/*',
-                    'files/*/*/*/*'
+                    'files/**/*'
                 ],
                 tasks: ['copy:app']
             },
